@@ -1,3 +1,21 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @abhaykhondela Sign out
+62
+1,951 225 rap2hpoutre/laravel-log-viewer
+ Code  Issues 14  Pull requests 4  Projects 0  Wiki  Insights
+laravel-log-viewer/src/views/log.blade.php
+eb88919  on Sep 6, 2018
+@rap2hpoutre rap2hpoutre code style
+@rap2hpoutre @sskl @cino @mikemand @mattlibera @DivineOmega @garygreen @elminson @alanwillms @mallardduck @dobrik @apreiml @ahuggins
+     
+217 lines (202 sloc)  7.16 KB
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,51 +31,40 @@
     body {
       padding: 25px;
     }
-
     h1 {
       font-size: 1.5em;
       margin-top: 0;
     }
-
     #table-log {
         font-size: 0.85rem;
     }
-
     .sidebar {
         font-size: 0.85rem;
         line-height: 1;
     }
-
     .btn {
         font-size: 0.7rem;
     }
-
     .stack {
       font-size: 0.85em;
     }
-
     .date {
       min-width: 75px;
     }
-
     .text {
       word-break: break-all;
     }
-
     a.llv-active {
       z-index: 2;
       background-color: #f5f5f5;
       border-color: #777;
     }
-
     .list-group-item {
       word-wrap: break-word;
     }
-
     .folder {
       padding-top: 15px;
     }
-
     .div-scroll {
       height: 80vh;
       overflow: hidden auto;
@@ -65,43 +72,15 @@
     .nowrap {
       white-space: nowrap;
     }
-
   </style>
 </head>
 <body>
 <div class="container-fluid">
   <div class="row">
-
-    <!--div class="col sidebar mb-3">
-      <h1><i class="fa fa-calendar" aria-hidden="true"></i> Laravel Log Viewer</h1>
-      <p class="text-muted"><i>by Rap2h</i></p>
-      <div class="list-group div-scroll">
-        @foreach($folders as $folder)
-          <div class="list-group-item">
-            <a href="?f={{ \Illuminate\Support\Facades\Crypt::encrypt($folder) }}">
-              <span class="fa fa-folder"></span> {{$folder}}
-            </a>
-            @if ($current_folder == $folder)
-              <div class="list-group folder">
-                @foreach($folder_files as $file)
-                  <a href="?l={{ \Illuminate\Support\Facades\Crypt::encrypt($file) }}&f={{ \Illuminate\Support\Facades\Crypt::encrypt($folder) }}"
-                    class="list-group-item @if ($current_file == $file) llv-active @endif">
-                    {{$file}}
-                  </a>
-                @endforeach
-              </div>
-            @endif
-          </div>
-        @endforeach
-        @foreach($files as $file)
-          <a href="?l={{ \Illuminate\Support\Facades\Crypt::encrypt($file) }}"
-             class="list-group-item @if ($current_file == $file) llv-active @endif">
-            {{$file}}
-          </a>
-        @endforeach
-      </div>
-    </div-->
-    <div class="col-12 table-container">
+    <div class="col sidebar mb-2">
+         <a href="#" class="btn btn-primary" href="{{ route('dashboard') }}" role="button">Back</a>
+    </div>
+    <div class="col-11 table-container">
       @if ($logs === null)
         <div>
           Log file >50M, please download it.
@@ -121,6 +100,7 @@
           </tr>
           </thead>
           <tbody>
+
           @foreach($logs as $key => $log)
             <tr data-display="stack{{{$key}}}">
               @if ($standardFormat)
@@ -214,3 +194,16 @@
 </script>
 </body>
 </html>
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Press h to open a hovercard with more details.
