@@ -60,7 +60,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col sidebar mb-2">
-         <a href="#" class="btn btn-primary" href="javascript:history.back()" role="button">Back</a>
+         <a href="#" class="btn btn-primary" href="javascript:history.back()" role="button">Go Back</a>
     </div>
     <div class="col-11 table-container">
       @if ($logs === null)
