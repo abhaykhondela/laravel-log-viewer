@@ -1,21 +1,3 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- @abhaykhondela Sign out
-62
-1,951 225 rap2hpoutre/laravel-log-viewer
- Code  Issues 14  Pull requests 4  Projects 0  Wiki  Insights
-laravel-log-viewer/src/views/log.blade.php
-eb88919  on Sep 6, 2018
-@rap2hpoutre rap2hpoutre code style
-@rap2hpoutre @sskl @cino @mikemand @mattlibera @DivineOmega @garygreen @elminson @alanwillms @mallardduck @dobrik @apreiml @ahuggins
-     
-217 lines (202 sloc)  7.16 KB
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,7 +60,7 @@ eb88919  on Sep 6, 2018
 <div class="container-fluid">
   <div class="row">
     <div class="col sidebar mb-2">
-         <a href="#" class="btn btn-primary" href="{{ route('dashboard') }}" role="button">Back</a>
+         <a href="#" class="btn btn-primary" href="{{ url()->previous() }}" role="button">Back</a>
     </div>
     <div class="col-11 table-container">
       @if ($logs === null)
